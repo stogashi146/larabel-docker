@@ -1,0 +1,6 @@
+version: '3.9' #docker-composeのバージョン
+services:
+  app:  #任意のサービス名
+    build: ./infra/php  #ビルド時の作業ディレクトリ
+    volumes:
+      - ./backend:/work #コンテナにマウントするディレクトリ
