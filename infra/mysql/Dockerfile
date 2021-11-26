@@ -9,4 +9,4 @@ ENV MYSQL_DATABASE=${MYSQL_DATABASE} \
 COPY ./my.cnf /etc/my.cnf
 RUN chmod 644 /etc/my.cnf
 RUN "mysql -u root -p${MYSQL_PASSWORD} ${MYSQL_DATABASE}"
-RUN "GRANT ALL ON *.* TO phper;"
+RUN "GRANT ALL ON *.* TO ${PMA_USER};"
